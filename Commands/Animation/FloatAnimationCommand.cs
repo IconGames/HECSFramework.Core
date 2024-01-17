@@ -9,5 +9,7 @@ namespace Commands
         public int Index;
         public float Value;
         public bool ForceSet;
+        public float DampTime;
+        public float DeltaTime;
     }
 }
