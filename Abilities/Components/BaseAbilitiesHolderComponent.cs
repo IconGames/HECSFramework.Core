@@ -28,8 +28,8 @@ namespace Components
 
             if (ability.TryGetComponent(out AdditionalAbilityIndexComponent component))
             {
-                foreach (var i in component.AdditionalIndeces)
-                    IndexToAbility.AddOrReplace(i, ability);
+                foreach (var i in component.additionalAbilityIdentifiers)
+                    IndexToAbility.AddOrReplace(i.Id, ability);
             }
 
             if (needInit)
@@ -43,8 +43,8 @@ namespace Components
 
             if (ability.TryGetComponent(out AdditionalAbilityIndexComponent component))
             {
-                foreach (var i in component.AdditionalIndeces)
-                    IndexToAbility.Remove(i);
+                foreach (var i in component.additionalAbilityIdentifiers)
+                    IndexToAbility.Remove(i.Id);
             }
 
             ability.Dispose();
